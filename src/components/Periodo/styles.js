@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const ContainerInputs = styled.div`
     display: flex ;
     flex-direction: ${({inline}) => inline ? "row" : "column"};
-    gap:1rem;
+    gap:0.5rem;
     align-items : ${({inline}) => inline ? "center" : "flex-start"};
     justify-content: space-between;
     font-size: 13px;   

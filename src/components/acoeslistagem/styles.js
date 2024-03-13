@@ -9,6 +9,7 @@ export const Container = styled.div`
     justify-content: end;
     margin-top:1rem;
     margin-left:37rem;
+    margin: 0.5rem auto;  
 `
 
 export const Button = styled.button`

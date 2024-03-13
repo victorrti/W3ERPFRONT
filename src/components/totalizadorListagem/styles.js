@@ -8,7 +8,7 @@ export const Conteudo = styled.div`
     justify-content:center ;
     padding: 2.5rem 0; 
     
-    margin: 0  40rem;
+    margin: 10rem  40rem;
     gap: 10px;   
     justify-content: center;
     border-top: 1px #d8d9dd solid ;

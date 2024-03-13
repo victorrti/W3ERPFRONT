@@ -1,6 +1,8 @@
 import {styled} from 'styled-components'
 import { TiArrowSortedDown } from "react-icons/ti";
 
+
+
 export const Container = styled.div`
     display: flex;
     flex-direction: ${({inline}) => inline ? "row" : "column"};
@@ -34,4 +36,15 @@ export const InputDiv = styled.input`
     
 
 
+`
+
+export const OptionsActions = styled.div`
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:0.9rem;
+   > button{
+        background: none;
+        border: none;
+    }
 `

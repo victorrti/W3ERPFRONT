@@ -8,7 +8,7 @@ export function Periodo({width,label,inline,marginLabel,placeholder,value,type,b
             <span>{label}</span>
         <ContainerInputs inline={inline}>                      
             <Input inline = {false}  width={width} value={value} block={block}  type={type}></Input>
-            <span>ATÉ</span>
+            <span>Até</span>
             <Input inline={false}  width={width} value={value} block={block} type={type}></Input>
         </ContainerInputs>
         </Container>

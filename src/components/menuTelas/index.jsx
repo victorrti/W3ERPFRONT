@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {MenuItem,MenuContainer,SubMenu,SubMenuItem,Container,LinkRoute} from './styles'
+import {MenuItem,MenuContainer,SubMenu,SubMenuItem,Container,LinkRoute,DivConteudo} from './styles'
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
@@ -16,18 +16,18 @@ export function MenuTelas(props){
         },
         {
             id:2,
-            nome:"Conta Pagar",
+            nome:"Conta pagar",
             sub: false,
             route:"/financeiro/contapagarListagem"
         },
         {
             id:2,
-            nome:"Conta a Receber",
+            nome:"Conta a receber",
             sub: false
         },
         {
             id:3,
-            nome:"Movimentacao Financeira",
+            nome:"Movimentacao financeira",
             sub:true,
             subItens:[
                 {
@@ -39,7 +39,7 @@ export function MenuTelas(props){
                 },
                 {
                     id:4,
-                    nome:"Tranferencia Interna",
+                    nome:"Tranferencia interna",
                     sub:false                    
                 },
                 {
@@ -49,7 +49,7 @@ export function MenuTelas(props){
                 },
                 {
                     id:4,
-                    nome:"Fechamento Financeiro",
+                    nome:"Fechamento financeiro",
                     sub:false                    
                 }
             ]
@@ -148,7 +148,7 @@ export function MenuTelas(props){
     const Faturamento = [
         {
             id:2,
-            nome:"Conta Pagar",
+            nome:"Conta pagar",
             sub: false
         },
         {
@@ -158,7 +158,7 @@ export function MenuTelas(props){
             subItens:[
                 {
                     id:3,
-                    nome:"gerenciar movimentações",
+                    nome:"Gerenciar movimentações",
                     sub:false,                 
 
                 },
@@ -239,10 +239,12 @@ export function MenuTelas(props){
     return(
 
         <Container>
-            {modulos.map((modulo) => (
-                modulo.id == props.idModulo ?
-                <Menu key={modulo.id} items={modulo.modulo} /> :""
-            ))}
+            <DivConteudo>
+                {modulos.map((modulo) => (
+                    modulo.id == props.idModulo ?
+                    <Menu key={modulo.id} items={modulo.modulo} /> :""
+                ))}
+            </DivConteudo>
         </Container>
 
     )

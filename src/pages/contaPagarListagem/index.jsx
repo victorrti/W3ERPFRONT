@@ -13,12 +13,28 @@ import { Checkbox } from '../../components/checkbox'
 
 export function ContaPagarListagem(){
     const listaContaApagar = [{
-        Codigo:"01",
-        Cliente:"Victor"
+        conta:"01",
+        vencimento:"Victor",
+        dataPagamento:"02/10/1222",
+        Parcela:"1",
+        Pagamentoa:"Victor",
+        documento:"1234/1",
+        descricao:"pagamento funcionario",
+        situacao:"Baixado",
+        outros:"",
+        valorAtual:"122,00"
     },
     {
-        Codigo:"02",
-        Cliente:"Matheus"
+        conta:"02",
+        vencimento:"Lais",
+        dataPagamento:"02/10/1222",
+        Parcela:"1",
+        Pagamentoa:"Victor",
+        documento:"1234/1",
+        descrição:"pagamento funcionario x",
+        situacao:"Baixado",
+        outros:"",
+        valorAtual:"122,00"
     },
 ]
     return(
@@ -33,58 +49,58 @@ export function ContaPagarListagem(){
                 </GroupInput>
 
                 <GroupInput avancado={true} titulo={"Datas"} inline={false} gap={"30px"}>                    
-                    <GroupInput  inline={true} gap={"10px"}>                    
+                    <GroupInput  inline={true} gap={"3rem"}>                    
                         <Periodo width={"166px"} inline={true} label ={"Periodo de emissão"} type={"date"}></Periodo>  
                         <Periodo width={"166px"} inline={true} label ={"Periodo de vencimento"} type={"date"}></Periodo> 
                         <Periodo width={"166px"} inline={true} label ={"Periodo do primeiro vencimento"} type={"date"}></Periodo>                      
                     </GroupInput>
-                    <GroupInput  inline={true} gap={"10px"}>                    
+                    <GroupInput  inline={true} gap={"3rem"}>                    
                         <Periodo width={"166px"} inline={true} label ={"Periodo de baixa"} type={"date"}></Periodo>  
                         <Periodo width={"166px"} inline={true} label ={"Periodo de lançamento"} type={"date"}></Periodo>                                            
                     </GroupInput>                        
                 </GroupInput>
-                <GroupInput titulo={"Documento/Pagamento"} avancado={true} inline={false} gap={"30px"}>
-                    <GroupInput inline={true} gap={"10px"}>
-                        <ComboBox label={"Tipo de documento"}></ComboBox>
-                        <Input type={"text"} label={"Documento/Descrição"}></Input>
-                        <Periodo width={"166px"} inline={true} label ={"Documento"} type={"number"}></Periodo>
+                <GroupInput titulo={"Documento/Pagamento"} avancado={true} inline={false} gap={"10px"}>
+                    <GroupInput inline={true} gap={"3rem"}>
+                        <ComboBox width={"36.2rem"} label={"Tipo de documento"}></ComboBox>
+                        <Input type={"text"} width="36.2rem" label={"Documento/Descrição"}></Input>
+                        <Periodo width={"16.6rem"} inline={true} label ={"Documento"} type={"number"}></Periodo>
                     </GroupInput>
-                    <GroupInput  inline={true} gap={"10px"}>
-                        <ComboBox label={"Conta Bancaria do coleto"}></ComboBox>                    
-                        <Periodo width={"166px"} inline={true} label ={"Valor"} type={"number"}></Periodo>
+                    <GroupInput  inline={true} gap={"3rem"}>
+                        <ComboBox width={"36.2rem"} label={"Conta Bancaria do coleto"}></ComboBox>                    
+                        <Periodo width={"16.6rem"} inline={true} label ={"Valor"} type={"number"}></Periodo>
                     </GroupInput>  
-                    <GroupInput  inline={true} gap={"10px"}>
-                        <ComboBox label={"Tipo de vinculo"}></ComboBox>
-                        <ComboBox label={"Vinculo"}></ComboBox>
-                        <ComboBox label={"Mostrar"}></ComboBox>
+                    <GroupInput  inline={true} gap={"3rem"}>
+                        <ComboBox width={"36.2rem"} label={"Tipo de vinculo"}></ComboBox>
+                        <ComboBox  width={"36.2rem"}label={"Vinculo"}></ComboBox>
+                        <ComboBox width={"36.2rem"} label={"Mostrar"}></ComboBox>
                     </GroupInput> 
-                    <GroupInput  inline={true} gap={"10px"}>
-                        <Periodo width={"166px"} inline={true} label ={"Numero da nota"} type={"number"}></Periodo>
-                        <Periodo width={"166px"} inline={true} label ={"Numero da NSF-E"} type={"number"}></Periodo>
-                        <Periodo width={"166px"} inline={true} label ={"Emissçao da nota fiscal"} type={"date"}></Periodo>
+                    <GroupInput  inline={true} gap={"3rem"}>
+                        <Periodo width={"16.6rem"} inline={true} label ={"Numero da nota"} type={"number"}></Periodo>
+                        <Periodo width={"16.6rem"} inline={true} label ={"Numero da NSF-E"} type={"number"}></Periodo>
+                        <Periodo width={"16.6rem"} inline={true} label ={"Emissão da nota fiscal"} type={"date"}></Periodo>
                     </GroupInput> 
                 </GroupInput>
                 <GroupInput titulo={"Faturamento"} avancado={true} gap={"3rem"} inline ={false}>
                     <GroupInput>
-                        <Periodo inline={true} label={"Numero da fatura"} type={"number"}></Periodo>
+                        <Periodo width={"16.6rem"} inline={true} label={"Numero da fatura"} type={"number"}></Periodo>
                     </GroupInput>
                     <GroupInput inline={true} gap={"1rem"}>
-                        <Periodo inline={true} label={"Venda"} type={"number"}></Periodo>
-                        <ComboBox label={"Vendedor"}></ComboBox>
-                        <ComboBox label={"Tipo de contrato"}></ComboBox>
-                        <ComboBox label={"Categoria"}></ComboBox>
+                        <Periodo width={"16.6rem"} inline={true} label={"Venda"} type={"number"}></Periodo>
+                        <ComboBox width={"24.3rem"} label={"Vendedor"}></ComboBox>
+                        <ComboBox width={"26.4rem"} label={"Tipo de contrato"}></ComboBox>
+                        <ComboBox width={"16.5rem"} label={"Categoria"}></ComboBox>
                     </GroupInput>
                 </GroupInput> 
-                <GroupInput inline={true} avancado={true} titulo={"Rateio"}>
-                    <ComboBox label={"Conta gerencial"}></ComboBox>
-                    <Input label={"motivo da taxa"} type={"text"}></Input>
-                    <ComboBox label={"Mostrar Projetos"}></ComboBox>
-                    <ComboBox label={"Tipo de projeto"}></ComboBox>
-                    <ComboBox label={"Tprojeto"}></ComboBox>
+                <GroupInput inline={true} gap={"3rem"} avancado={true} titulo={"Rateio"}>
+                    <ComboBox width={"16.6rem"} label={"Conta gerencial"}></ComboBox>
+                    <Input width={"16.6rem"} label={"motivo da taxa"} type={"text"}></Input>
+                    <ComboBox width={"26.4rem"} label={"Mostrar Projetos"}></ComboBox>
+                    <ComboBox width={"16.6rem"} label={"Tipo de projeto"}></ComboBox>
+                    <ComboBox width={"16.6rem"}label={"Projeto"}></ComboBox>
                 </GroupInput> 
-                <GroupInput inline={true} avancado={true} titulo={"Outros"}>
+                <GroupInput inline={true} gap={"3rem"}avancado={true} titulo={"Outros"}>
                     <ComboBox label={"Tipo de taxa"}></ComboBox>
-                    <ComboBox label={"TMotivo"}></ComboBox>
+                    <ComboBox label={"Motivo"}></ComboBox>
                     <ComboBox label={"Motivo do cancelamento"}></ComboBox>
                     <ComboBox label={"Situação do protesto"}></ComboBox>
                 </GroupInput>
@@ -104,16 +120,16 @@ export function ContaPagarListagem(){
             </Filtro> 
             <AcoesListagem></AcoesListagem>
             <Listagem listagem={listaContaApagar}>
-                <Input name="Conta"  width={"1%"}inline={false}  label="" ></Input>
-                <Input name="Vencimento" width={"10%px"}  inline={false}  label="" ></Input>
-                <Input name="Data de pagamento" width={"10%"}  inline={false}  label="" ></Input>
+                <Input name="conta"  width={"1%"}inline={false}  label="" ></Input>
+                <Input name="vencimento" width={"10%px"}  inline={false}  label="" ></Input>
+                <Input name="dataPagamento" width={"10%"}  inline={false}  label="" ></Input>
                 <Input name="Parcela" width={"10%"} inline={false}  label="" ></Input>
-                <Input name="Pagamento a" width={"10%"}  inline={false}  label="" ></Input>
-                <Input name="Documento" width={"10%"}  inline={false}  label="" ></Input>
-                <Input name="Descrição" width={"10%"}  inline={false}  label="" ></Input>
-                <Input name="Situação" width={"10%"}  inline={false}  label="" ></Input>
-                <Input name="Outros" width={"10%"}  inline={false}  label="" ></Input>
-                <Input name="Valor Atual" width={"10%"}  inline={false}  label="" ></Input>
+                <Input name="Pagamentoa" width={"10%"}  inline={false}  label="" ></Input>
+                <Input name="documento" width={"10%"}  inline={false}  label="" ></Input>
+                <Input name="descricao" width={"10%"}  inline={false}  label="" ></Input>
+                <Input name="situacao" width={"10%"}  inline={false}  label="" ></Input>
+                <Input name="outros" width={"10%"}  inline={false}  label="" ></Input>
+                <Input name="valorAtual" width={"10%"}  inline={false}  label="a" ></Input>
             </Listagem>
             <TotalizadorListagem titulo={"Valores"}></TotalizadorListagem>
             <Rodape></Rodape>
