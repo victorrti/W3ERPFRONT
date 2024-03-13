@@ -10,6 +10,11 @@ export const Container = styled.div`
     padding:0 36rem;
     background-color: #f4f4f4;
 `
+export const DivConteudo = styled.div`
+  
+    margin: 0 auto ;
+    max-width: 114rem;
+`
 
 export const MenuContainer = styled.ul`
     display: flex;
